@@ -10,8 +10,8 @@ public class LoginTest  extends TestBase {
 
     @BeforeMethod
     public void preCondition(){
-        if(TestBase.app.user().isLoginSuccess()){
-            TestBase.app.user().logout();
+        if(app.user().isLoginSuccess()){
+            app.user().logout();
         }
     }
 
@@ -19,11 +19,11 @@ public class LoginTest  extends TestBase {
     @Test
     public void loginSuccess(){
 
-        TestBase.app.user().openLoginForm();
-        TestBase.app.user().fillLoginForm("noa@gmail.com","Nnoa12345$");
-        TestBase.app.user().submitLogin();
+        app.user().openLoginForm();
+        app.user().fillLoginForm("noa@gmail.com","Nnoa12345$");
+        app.user().submitLogin();
 
-        Assert.assertTrue(TestBase.app.user().isLoginSuccess());
+        Assert.assertTrue(app.user().isLoginSuccess());
 
     }
 
@@ -31,11 +31,11 @@ public class LoginTest  extends TestBase {
     @Test
     public void loginSuccess2(){
 
-        TestBase.app.user().openLoginForm();
-        TestBase.app.user().fillLoginForm("noa@gmail.com","Nnoa12345$");
-        TestBase.app.user().submitLogin();
+        app.user().openLoginForm();
+        app.user().fillLoginForm("noa@gmail.com","Nnoa12345$");
+        app.user().submitLogin();
 
-        Assert.assertTrue(TestBase.app.user().isLoginSuccess());
+        Assert.assertTrue(app.user().isLoginSuccess());
 
     }
 }
